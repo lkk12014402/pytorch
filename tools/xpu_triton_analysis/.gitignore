@@ -2,3 +2,6 @@
 output/*.json
 output/*.csv
 output/*.md
+
+# But keep the README
+!output/README.md
