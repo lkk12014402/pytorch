@@ -1,0 +1,4 @@
+# Ignore generated output files (they will be regenerated on each run)
+output/*.json
+output/*.csv
+output/*.md

@@ -30,6 +30,7 @@ from tools.xpu_triton_analysis.output_formatter import (
     write_json_output,
     write_csv_output,
 )
+from tools.xpu_triton_analysis.summary_report import generate_summary_report
 
 
 def main():
@@ -109,6 +110,11 @@ def main():
         csv_path = output_dir / "ops_analysis.csv"
         write_csv_output(ops, csv_path)
         print(f"  CSV: {csv_path}")
+
+    # Always generate summary report
+    summary_path = output_dir / "summary_report.md"
+    generate_summary_report(ops, summary_path)
+    print(f"  Summary: {summary_path}")
 
     print()
     print("=" * 80)
